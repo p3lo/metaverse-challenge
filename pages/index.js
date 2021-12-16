@@ -13,8 +13,11 @@ export default function Home() {
         <title>Metaverse Challenge</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <h1>Welcome to the APP</h1>
-      <button onClick={logout}>Logout</button>
+      <div className="flex items-center justify-center h-screen">
+        <button className="px-5 py-3 border border-gray-500 hover:shadow-gray-300 hover:shadow-md" onClick={logout}>
+          Logout
+        </button>
+      </div>
     </div>
   );
 }
