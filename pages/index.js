@@ -14,7 +14,10 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className="flex items-center justify-center h-screen">
-        <button className="px-5 py-3 border border-gray-500 hover:shadow-gray-300 hover:shadow-md" onClick={logout}>
+        <button
+          className="px-5 py-3 border border-gray-500 hover:shadow-gray-300 hover:shadow-md transition ease-in-out delay-150 hover:translate-y-[2px] hover:scale-102"
+          onClick={logout}
+        >
           Logout
         </button>
       </div>
