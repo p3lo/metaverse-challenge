@@ -19,10 +19,7 @@ function Messages() {
 
   return (
     <div className="pb-56">
-      <div className="my-5">
-        <ByMoralis variant="dark" style={{ marginLeft: 'auto', marginRight: 'auto' }} />
-      </div>
-      <div className="p-4 space-y-10">
+      <div className="px-4 py-2 text-sm space-y-7">
         {data.map((message) => (
           <Message key={message.id} message={message} />
         ))}
@@ -30,7 +27,7 @@ function Messages() {
       <div className="flex justify-center">
         <SendMessage endOfMessagesRef={endOfMessagesRef} />
       </div>
-      <div ref={endOfMessagesRef} className="mt-5 text-center text-gray-400">
+      <div ref={endOfMessagesRef} className="mt-5 text-center text-gray-800">
         <p>You're up to date {user.getUsername()}!</p>
       </div>
     </div>

@@ -9,21 +9,21 @@ function Message({ message }) {
 
   return (
     <div className={`flex items-end space-x-2 relative ${isUserMessage && 'justify-end'}`}>
-      <div className={`relative w-8 h-8 ${isUserMessage && 'order-last ml-2'}`}>
+      <div className={`relative w-7 h-7 ${isUserMessage && 'order-last ml-2'}`}>
         <Avatar username={message.get('username')} />
       </div>
       <div
-        className={`flex p-3 space-x-4 rounded-lg ${
-          isUserMessage ? 'rounded-br-none bg-pink-300' : 'rounded-bl-none bg-blue-400'
+        className={`flex px-3 py-1 space-x-4 rounded-lg text-sm text-gray-800 ${
+          isUserMessage ? 'rounded-br-none bg-blue-400' : 'rounded-bl-none bg-green-400'
         }`}
       >
         <p>{message.get('message')}</p>
       </div>
       <TimeAgo
-        className={`text-[10px] italic text-gray-400 ${isUserMessage && 'order-first pr-1'}`}
+        className={`text-[10px] italic text-blue-600 ${isUserMessage && 'order-first pr-1'}`}
         datetime={message.createdAt}
       />
-      <p className={`absolute text-xs -bottom-5 ${isUserMessage ? 'text-pink-300' : 'text-blue-400'}`}>
+      <p className={`absolute text-xs -bottom-5 ${isUserMessage ? 'text-blue-600' : 'text-green-600'}`}>
         {message.get('username')}
       </p>
     </div>
